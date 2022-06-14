@@ -3,6 +3,8 @@ import kwon from '../images/do-kwon.jpg'
 
 export default function About() {
   return (
+    <div>
+    <div id="about"></div>
     <div className="about-main container">
       <div className="row">
         <div className="col-md-6">
@@ -15,6 +17,7 @@ export default function About() {
             <img src={kwon} alt="" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -12,11 +12,11 @@ export default function Navtop() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">About</Nav.Link>
-              <Nav.Link href="#link">Tokenomics</Nav.Link>
-              <Nav.Link href="#link">Roadmap</Nav.Link>
-              <Nav.Link href="#link">Audit</Nav.Link>
-              <Nav.Link><Button variant="outline-warning">NavButton</Button></Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#tokenomics">Tokenomics</Nav.Link>
+              <Nav.Link href="#roadmap">Roadmap</Nav.Link>
+              <Nav.Link href="#audit">Audit</Nav.Link>
+              <Nav.Link><Button variant="outline-warning">Staking App</Button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

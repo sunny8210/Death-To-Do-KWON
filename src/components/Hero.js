@@ -13,8 +13,8 @@ export default function Hero() {
             unique NFTs.
           </p>
           <div>
-            <button className="btn btn-outline-warning">Button 1</button>
-            <button className="btn btn-warning ms-2">Button 1</button>
+            <button className="btn btn-outline-warning">Chart </button>
+            <button className="btn btn-warning ms-2">Buy $DEAD</button>
           </div>
         </div>
         <div className="col-lg-5">

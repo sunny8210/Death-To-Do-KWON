@@ -9,6 +9,8 @@ import {GrMoney} from 'react-icons/gr'
 
 export default function Roadmap() {
   return (
+    <div>
+    <div id="roadmap"></div>
     <div className="container">
       <h2 className="text-center pb-5">ROADMAP</h2>
       <VerticalTimeline>
@@ -57,6 +59,7 @@ export default function Roadmap() {
           {/* <p>User Experience, Visual Design</p> */}
         </VerticalTimelineElement>
       </VerticalTimeline>
+    </div>
     </div>
   );
 }
