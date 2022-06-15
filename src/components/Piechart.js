@@ -1,11 +1,19 @@
 import React, { useCallback, useState } from 'react'
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts'
 
-const tokenomics = [
-  { name: 'Tax', value: 10, fill: '#FFD93A' },
+const taxDistribution = [
+  // { name: 'Tax', value: 10, fill: '#FFD93A' },
   { name: 'Marketing', value: 6, fill: '#FFD93A' },
   { name: 'LP', value: 4, fill: '#D5B84F' },
 ]
+
+const tokenDistribution = [
+  {name : "Staking", value: 50, fill:"#FFC91C"},
+  {name: "Burn",  value: 39, fill:"#FFD93A"},
+  {name:"Launch", value: 11, fill:"#D5B84F"},
+]
+
+
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180
   const {
@@ -77,44 +85,51 @@ export default function Piechart() {
     [setTokenIndex],
   )
 
-  const [buyIndex, setBuyIndex] = useState(0)
-  const onBuyEnter = useCallback(
+  const [tokendisIndex, setTokenDisIndex] = useState(0)
+  const onDisEnter = useCallback(
     (_, index) => {
-      setBuyIndex(index)
+      setTokenDisIndex(index)
     },
-    [setBuyIndex],
+    [setTokenDisIndex],
   )
 
-  const [sellIndex, setSellIndex] = useState(0)
-  const onSellEnter = useCallback(
-    (_, index) => {
-      setSellIndex(index)
-    },
-    [setSellIndex],
-  )
-
-  const [wkndIndex, setWkndIndex] = useState(0)
-  const onWkndEnter = useCallback(
-    (_, index) => {
-      setWkndIndex(index)
-    },
-    [setWkndIndex],
-  )
+  
+  
   return (
     <div>
-      <div className="w-100">
-        <div className="row w-100" style={{marginTop:"-100px", marginBottom:"50px"}}>
-          <div className="col-md-12">
+      <div className="w-100 h-50">
+        <div
+          className="row w-100"
+          style={{ marginTop: '-100px', marginBottom: '50px' }}
+        >
+          <div className="col-md-6">
+          <h5 style={{marginTop:"50px", textAlign:"center", color:"#fff"}}>Tax Distribution</h5>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
                   activeIndex={tokenIndex}
                   activeShape={renderActiveShape}
-                  data={tokenomics}
+                  data={taxDistribution}
                   innerRadius={60}
                   outerRadius={80}
                   dataKey="value"
                   onMouseEnter={onTokenEnter}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="col-md-6">
+          <h5 style={{marginTop:"50px", textAlign:"center", color:"#fff"}}>Token Distribution</h5>
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie
+                  activeIndex={tokendisIndex}
+                  activeShape={renderActiveShape}
+                  data={tokenDistribution}
+                  innerRadius={60}
+                  outerRadius={80}
+                  dataKey="value"
+                  onMouseEnter={onDisEnter}
                 />
               </PieChart>
             </ResponsiveContainer>

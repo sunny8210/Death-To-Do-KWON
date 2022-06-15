@@ -32,7 +32,7 @@ export default function FAQs() {
             <Accordion.Item eventKey="3">
               <Accordion.Header>STEP 4</Accordion.Header>
               <Accordion.Body>
-              Swap your BNB (BEP-20) for Shinjiru Inu Click the cog button and change the Slippage amount to 5%. Add your desired BNB amount you’d like to swap, once you’re happy click the “Swap” button to finalize the trade.
+              Swap your BNB (BEP-20) for $DEAD Click the cog button and change the Slippage amount to 12%. Add your desired BNB amount you’d like to swap, once you’re happy click the “Swap” button to finalize the trade.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

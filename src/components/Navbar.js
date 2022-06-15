@@ -15,7 +15,7 @@ export default function Navtop() {
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#tokenomics">Tokenomics</Nav.Link>
               <Nav.Link href="#roadmap">Roadmap</Nav.Link>
-              <Nav.Link href="#audit">Audit</Nav.Link>
+              {/* <Nav.Link href="#audit">Audit</Nav.Link> */}
               <Nav.Link><Button variant="outline-warning">Staking App</Button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
