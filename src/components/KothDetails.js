@@ -17,8 +17,8 @@ export default function KothDetails() {
               <span className="winner-details">200k</span> <br />
             </div>
             <div className="current-sell-tax">
-              <span className="showDetails">Current Sell Tax : </span>{' '}
-              <span className="winner-details">5%</span>
+              <span className="showDetails">Sell Tax During KOTH : </span>{' '}
+              <span className="winner-details">20%</span>
             </div>
           </div>
         </div>
