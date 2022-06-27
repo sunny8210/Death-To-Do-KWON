@@ -13,8 +13,22 @@ export default function Hero() {
             unique NFTs.
           </p>
           <div>
-            <button className="btn btn-outline-warning">Chart </button>
-            <button className="btn btn-warning ms-2">Buy $DEAD</button>
+            <a
+              className="btn btn-outline-warning"
+              href="https://poocoin.app/tokens/0xaf4b199f9340064838db5efddb2f2a5915269b3f"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Chart{" "}
+            </a>
+            <a
+              className="btn btn-warning ms-2"
+              href="https://pancakeswap.finance/swap?outputCurrency=0xaf4b199f9340064838db5efddb2f2a5915269b3f"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Buy $DEAD
+            </a>
           </div>
         </div>
         <div className="col-lg-5">

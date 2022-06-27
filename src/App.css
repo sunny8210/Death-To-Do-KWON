@@ -68,6 +68,11 @@
   width: fit-content;
   margin: auto;
 }
+.showWinner{
+  max-height: 500px;
+  overflow-y: auto;
+}
+
 /* ABOUT */
 .about-main {
   padding-top: 100px;

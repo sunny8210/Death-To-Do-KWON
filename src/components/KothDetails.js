@@ -1,34 +1,46 @@
-import React, { useState, useEffect } from 'react'
-import Table from 'react-bootstrap/Table';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import Table from "react-bootstrap/Table";
+import axios from "axios";
 
 export default function KothDetails() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
-  useEffect(()=>{
-    setInterval(()=>{
+  useEffect(() => {
+    setInterval(() => {
       TableData();
-    },3000)
-  },[])
+    }, 3000);
+  }, []);
 
-  const TableData =async()=>{
-    axios.get("https://34c7857f3814.in.ngrok.io/kothwinners").then((res)=>{
-      console.log(res)
-      setData(res.data)
-    }).catch(console.error)
-  }
+  const TableData = async () => {
+    axios
+      .get("https://34c7857f3814.in.ngrok.io/kothwinners")
+      .then((res) => {
+        console.log(res);
+        setData(res.data);
+      })
+      .catch(console.error);
+  };
 
   return (
     <div>
       <div className="container koth-main">
         <div className="koth-details">
+          <div className="current-sell-tax text-center mt-5 mb-4">
+            <span className="showDetails">Sell Tax During KOTH : </span>{" "}
+            <span className="winner-details">20%</span>
+          </div>
           <div className="showWinner">
-          
-            <div className="current-sell-tax text-center">
-              <span className="showDetails">Sell Tax During KOTH : </span>{' '}
-              <span className="winner-details">20%</span>
-            </div>
-            <Table responsive style={{backgroundColor:"#010101", color:"#fff",overflow:"hidden",overflowY:'scroll',Height:'100px'}} className="rounded mt-3">
+            <Table
+              responsive
+              style={{
+                backgroundColor: "#010101",
+                color: "#fff",
+                overflow: "hidden",
+                overflowY: "scroll",
+                Height: "100px",
+              }}
+              className="rounded mt-3"
+            >
               <thead>
                 <tr>
                   <th>Winner</th>
@@ -37,18 +49,18 @@ export default function KothDetails() {
                 </tr>
               </thead>
               <tbody>
-                {data.map((res)=>
-                <tr>
-                <td>{res.Winner}</td>
-                <td>{res.Amount}</td>
-                <td>{res.Time}</td>
-              </tr>
-                )}
+                {data.map((res) => (
+                  <tr>
+                    <td>{res.Winner}</td>
+                    <td>{res.Amount}</td>
+                    <td>{res.Time}</td>
+                  </tr>
+                ))}
               </tbody>
             </Table>
           </div>
         </div>
       </div>
-    </div> 
-  )
+    </div>
+  );
 }
