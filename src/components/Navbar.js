@@ -12,6 +12,7 @@ export default function Navtop() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#koth">Koth</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#tokenomics">Tokenomics</Nav.Link>
               <Nav.Link href="#roadmap">Roadmap</Nav.Link>

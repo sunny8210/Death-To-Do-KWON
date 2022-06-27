@@ -1,0 +1,64 @@
+.timer-wrapper {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffd93a;
+  font-family: cursive;
+}
+.text {
+  color: #ffd93a;
+  font-family: cursive;
+}
+
+.value {
+  font-size: 40px;
+}
+
+.info {
+  max-width: 360px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.koth-details {
+  margin-top: 20px;
+}
+
+.showDetails {
+  font-size: 17px;
+  color: #ffd93a;
+}
+
+a.wallet-address-link {
+  color: #9aa9a9;
+}
+
+a.wallet-address-link:hover {
+  color: #ffd93a;
+}
+
+.winner-details {
+  color: #9aa9a9;
+}
+.ktoh-other-details {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .timer-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

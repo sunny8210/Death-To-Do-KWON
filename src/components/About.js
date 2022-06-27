@@ -7,7 +7,7 @@ export default function About() {
       <div id="about"></div>
       <div className="about-main container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <h2>PROJECT &amp; ECOSYSTEM</h2>
             <p>
               The arrogance of Do Kwon resulted in the death of 8 investors and
@@ -33,7 +33,7 @@ export default function About() {
               WHITEPAPER
             </a>
           </div>
-          <div className="col-md-6 d-flex align-items-center py-5 py-md-0">
+          <div className="col-lg-6 d-flex align-items-center py-5 py-lg-0">
             <img src={kwon} alt="" />
           </div>
         </div>

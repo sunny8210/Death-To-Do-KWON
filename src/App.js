@@ -5,6 +5,7 @@ import Tokenomics from "./components/Tokenomics";
 import FAQs from "./components/FAQs";
 import Footer from "./components/Footer";
 import Roadmap from "./components/Roadmap";
+import Countdown from "./components/Countdown";
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
         <Navtop />
         <Hero />
       </div>
-      <About/>
-      <Tokenomics/>
-      <Roadmap/>
-      <FAQs/>
-      <Footer/>
+      <Countdown />
+      <About />
+      <Tokenomics />
+      <Roadmap />
+      <FAQs />
+      <Footer />
     </div>
   );
 }
