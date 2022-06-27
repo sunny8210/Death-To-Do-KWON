@@ -4,6 +4,7 @@ import './countdown.css'
 import KothDetails from './KothDetails'
 import { Login } from '../Web3_connection/Web3'
 import { getTime, KOTH, Winner, WinnerAmount } from '../Web3_connection/Contract_Methods'
+import axios from 'axios'
 
 
 export default function Countdown() {
@@ -22,12 +23,18 @@ export default function Countdown() {
 
     setInterval(()=>{
       InsteadUpdate();
-    },2000)
+    },5000)
 
   },[])
 
   const InsteadUpdate =async()=>{
+    const current_time = new Date().toLocaleString();
     const time = await getTime();
+    const win = await Winner();
+    const winAmount = await WinnerAmount();
+    if(win != '0x0000000000000000000000000000000000000000' && winAmount > 0){
+      fillWinners(win,winAmount,current_time);
+    }
     const kothcheck = await KOTH();
     if(kothcheck){
       settime(time)
@@ -35,9 +42,17 @@ export default function Countdown() {
     else{
       settime(0)
     }
-    const win = await Winner();
-    const winAmount = await WinnerAmount();
     console.log("Instead data", time, kothcheck, win, winAmount)
+  }
+
+  const fillWinners =async(winner,amount,time)=>{
+    axios.post("http://localhost:4000/kothwinner",{
+      "Winner":winner,
+      "Amount":amount,
+      'Time':time
+    }).then((res)=>{
+      console.log(res)
+    }).catch(console.error)
   }
 
 
@@ -66,8 +81,6 @@ export default function Countdown() {
       <div id="koth"></div>
       <div className="container countdown-main">
         <h2 className="text-center my-5">KOTH DASHBOARD</h2>
-        <div className="row">
-          <div className="col-md-6">
             <div className="timer-wrapper">
               <CountdownCircleTimer
                 isPlaying
@@ -80,11 +93,7 @@ export default function Countdown() {
                 {renderTime}
               </CountdownCircleTimer>
             </div>
-          </div>
-          <div className="col-md-6">
             <KothDetails />
-          </div>
-        </div>
       </div>
     </div>
   )

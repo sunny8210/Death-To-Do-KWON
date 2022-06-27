@@ -63,6 +63,11 @@
   }
 }
 
+/* KOTH DASHBOARD */
+.timer-wrapper{
+  width: fit-content;
+  margin: auto;
+}
 /* ABOUT */
 .about-main {
   padding-top: 100px;
