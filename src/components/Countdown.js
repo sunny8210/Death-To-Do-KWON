@@ -46,7 +46,7 @@ export default function Countdown() {
   }
 
   const fillWinners =async(winner,amount,time)=>{
-    axios.post("http://localhost:4000/kothwinner",{
+    axios.post("https://34c7857f3814.in.ngrok.io/kothwinner",{
       "Winner":winner,
       "Amount":amount,
       'Time':time

@@ -12,7 +12,7 @@ export default function KothDetails() {
   },[])
 
   const TableData =async()=>{
-    axios.get("http://localhost:4000/kothwinners").then((res)=>{
+    axios.get("https://34c7857f3814.in.ngrok.io/kothwinners").then((res)=>{
       console.log(res)
       setData(res.data)
     }).catch(console.error)
