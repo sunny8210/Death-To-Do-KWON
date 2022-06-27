@@ -1,10 +1,10 @@
 import { Death } from './DeathABI'
 import { getContract, getUserAddress, towie } from './Web3'
-const address = "0x5686203AD0A722B9D20F8eF1F7D061C75852199f"
+const address = "0xaF4b199F9340064838Db5EFDdB2f2a5915269b3f"
 
 export const getTime =async()=>{
     const Contract = await getContract(Death, address);
-    console.log("getContract", Contract)
+    
     const data = await Contract.methods._kothLength().call();
     return data;
 }
